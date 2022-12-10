@@ -18,7 +18,6 @@
 - Duplicate of Name Node
 - Works in Active-Passive mode
 
-### 
-- Name node maintains below information
+### Name node maintains below information
 1. **FS-Image** - It contains complete state of the file system since the start of Name Node
 2. **Edit Logs** - It contains the recent modifications made to the file system
