@@ -11,12 +11,14 @@
 - Higgly Available -> Very very less downtime
 
 #### 2 ways to achieve High Availability in Hadoop:
+```
 1. Secondary Name Node
 - 
 
 2. Standby Name Node
 - Duplicate of Name Node
 - Works in Active-Passive mode
+```
 
 - Name node maintains below information
 1. **FS-Image** - It contains complete state of the file system since the start of Name Node
