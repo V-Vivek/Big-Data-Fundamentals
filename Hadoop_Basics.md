@@ -1,3 +1,11 @@
+## Big Data
+Data which cannot be handeled by traditional databases.
+
+- Technical Definition
+Any data related problem that satisfies 5V's criteria
+
+
+
 ## Replication Management
 
 ## Rack Awareness
