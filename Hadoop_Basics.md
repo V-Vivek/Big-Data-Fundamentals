@@ -21,10 +21,16 @@
 - Distributed computation framework  
 - Specially designed for batch data processing  
 
-1. ***Distributed Storage***: Breaks data into small blocks & stores it into different machines  
-2. ***Distributed Computation***: Process multiple parts of data on different machines at the same time  
-3. ***Commodity Hardware***: Simple machine which has storage & processing capability  
-4. ***Cluster***: Combination of multiple commodity hardware
+## Hadoop components
+1. ***HDFS*** -> Storage 
+2. ***Map-Reduce*** -> Processing
+3. ***YARN*** -> Resource Management
+
+## Basic terminologies
+- ***Distributed Storage***: Breaks data into small blocks & stores it into different machines  
+- ***Distributed Computation***: Process multiple parts of data on different machines at the same time  
+- ***Commodity Hardware***: Simple machine which has storage & processing capability  
+- ***Cluster***: Combination of multiple commodity hardware
 
 ## Replication Management
 
