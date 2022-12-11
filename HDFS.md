@@ -1,5 +1,5 @@
 
-# HDFS - Hadoop Files System
+# HDFS - Hadoop Distributed File System
 
 ## Name Node
 - It acts like a master node & manages Data Node
@@ -11,6 +11,9 @@
 - Data Nodes will also help in computing
 - Data Nodes sends heartbeat to Name Node periodically to report the overall health of the system
 
+# Block
+- Smallest unit of physical memory where data is stored
+- Default size of a block in Hadoop 2.x is 128MB
 
 ## Replication Management
 
