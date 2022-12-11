@@ -1,9 +1,21 @@
+
 ## Big Data
-Data which cannot be handeled by traditional databases.
 
-- Technical Definition
-Any data related problem that satisfies 5V's criteria
+- Data which cannot be handeled by traditional databases.
+- Any data related problem that satisfies 5V's criteria
 
+## 5V's of Big Data
+
+1. ***Volume***: Huge amount of data(Hundered's of GB, TB, PB, ...)
+2. ***Variety***: Different formats of data
+	- ***Structured Data***: Where schema is fixed. Example: Relational data  
+	- ***Semi-structured Data***: Where schema is flexible. Example: JSON, XML  
+	- ***Unstructured Data***: Where schema doesn't exist. Example: image, audio, video  
+3. ***Velocity***: Speed of data generation
+	- ***Batch processing***: Data ingested after specific time intervals. Example: Electricity bill, Credit card bill
+	- ***Real Time processing***: Data is ingested in near real time. Example: Live gameplay, content streaming
+4. ***Value***: Extracting meaningful information  
+5. ***Veracity***: Related to uncertainity in the data
 
 
 ## Replication Management
