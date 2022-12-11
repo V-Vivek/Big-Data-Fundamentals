@@ -17,6 +17,18 @@
 4. ***Value***: Extracting meaningful information  
 5. ***Veracity***: Related to uncertainity in the data
 
+## Hadoop
+- Distributed computation framework  
+- Specially designed for batch data processing  
+
+1. ***Distributed Storage***: Breaks data into small blocks & stores it into different machines  
+2. ***Distributed Computation***: Process multiple parts of data on different machines at the same time
+
+## Commodity Hardware
+Simple machine which has storage & processing capability
+
+## Cluster
+Combination of multiple commodity hardware
 
 ## Replication Management
 
