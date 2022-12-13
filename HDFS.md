@@ -11,13 +11,16 @@
 - Data Nodes will also help in computing
 - Data Nodes sends heartbeat to Name Node periodically to report the overall health of the system
 
-# Block
+## Block
 - Smallest unit of physical memory where data is stored
 - Default size of a block in Hadoop 2.x is 128MB
 
 ## Replication Management
+- ***Replica*** -> Multiple copies of same block
+- ***Replication factor*** -> It indicates total no. of copies of the data block. In Hadoop default replication factor is 3 (1 primary block + 2 replicated blocks). Each replica is stored in different DataNode.
 
 ## Rack Awareness
+- 
 
 ## HDFS Write Request
 - 3 steps of HDFS write request:
