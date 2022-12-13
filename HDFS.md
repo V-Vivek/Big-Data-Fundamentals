@@ -28,21 +28,25 @@
 <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200702122324/HDFS-Rack-Awareness-Example.png" alt="hadoop" width="400" height="400"/>
 
 ## HDFS Write Request
-- 3 steps of HDFS write request:
+- 3 steps of HDFS write request:  
 	1. HDFS Client contacts Name Node to get the IP addresses of Data Nodes in which data will be written.  
 	2. It inserts & replicates data in the given Data Nodes.  
 	3. It sends acknowledgement to Name Node regarding the success/failure of the write operation. Name Node updates Meta data accordingly.
 
 ## High Availability or Fault Tolerence
-- It is a method to handle the failure/breakdown of Name Node  
-- Highly Available -> Very very less downtime  
-- Name node maintains below information  
-	1. ***Edit Logs*** - It contains the recent modifications made to the file system. It stores only temporary data, it gets empty when its data is copied into FA-Image
-	2. ***FS-Image*** - It contains complete state of the file system since the start of Name Node. After a particular time interval ***Edit Logs*** data is appended in ***FS-Image***.
 
-#### 2 ways to achieve High Availability in Hadoop:
-1. Secondary Name Node
-- 
+- It is a method to handle the failure/breakdown of Name Node
+- Highly Available -> Very very less downtime
+- Name node maintains below information
+	1. ***Edit Logs*** - It contains the recent modifications made to the file system. It stores only temporary data, it gets empty when its data is copied into FA-Image.
+	2. ***FS-Image*** - It contains complete state of the file system since the start of Name Node. After a particular time interval Edit Logs data is appended in FS-Image.
+
+- ***2 ways to achieve High Availability in Hadoop***:
+	1. Secondary Name Node: 
+		1. It does increment checkpointing(Time interval)
+		2. Keeps latest FS-Image at checkpoint as a backup file
+		3. In case of breakdown the Name Node will fetch back the FS-Image data from the Secondary Name Node.
+		4. Not suitable for critical systems as downtime > 10 mins
 
 2. Standby Name Node
 - Duplicate of Name Node
