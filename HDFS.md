@@ -20,7 +20,12 @@
 - ***Replication factor*** -> It indicates total no. of copies of the data block. In Hadoop default replication factor is 3 (1 primary block + 2 replicated blocks). Each replica is stored in different DataNode.
 
 ## Rack Awareness
-- 
+- ***Rack*** -> The rack is a physical collection of nodes in Hadoop cluster (maybe 30 to 40).
+- ***Rack awareness policies***
+	1. There should not be more than 1 replica on the same Datanode.  
+	2. More than 2 replica’s of a single block is not allowed on the same Rack.  
+	3. The number of racks used inside a Hadoop cluster must be smaller than the number of replicas.
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200702122324/HDFS-Rack-Awareness-Example.png" alt="hadoop" width="400" height="400"/>
 
 ## HDFS Write Request
 - 3 steps of HDFS write request:
