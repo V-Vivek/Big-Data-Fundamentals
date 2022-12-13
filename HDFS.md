@@ -29,11 +29,16 @@
 
 ## HDFS Write Request
 - 3 steps of HDFS write request:
-1. HDFS Client contacts Name Node to get the IP addresses of Data Nodes in which data will be written.
+	1. HDFS Client contacts Name Node to get the IP addresses of Data Nodes in which data will be written.  
+	2. It inserts & replicates data in the given Data Nodes.  
+	3. It sends acknowledgement to Name Node regarding the success/failure of the write operation. Name Node updates Meta data accordingly.
 
 ## High Availability or Fault Tolerence
-- It is a method to handle the failure/breakdown of Name Node
-- Higgly Available -> Very very less downtime
+- It is a method to handle the failure/breakdown of Name Node  
+- Highly Available -> Very very less downtime  
+- Name node maintains below information  
+	1. ***Edit Logs*** - It contains the recent modifications made to the file system. It stores only temporary data, it gets empty when its data is copied into FA-Image
+	2. ***FS-Image*** - It contains complete state of the file system since the start of Name Node. After a particular time interval ***Edit Logs*** data is appended in ***FS-Image***.
 
 #### 2 ways to achieve High Availability in Hadoop:
 1. Secondary Name Node
@@ -43,6 +48,4 @@
 - Duplicate of Name Node
 - Works in Active-Passive mode
 
-### Name node maintains below information
-1. **FS-Image** - It contains complete state of the file system since the start of Name Node
-2. **Edit Logs** - It contains the recent modifications made to the file system
+
