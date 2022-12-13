@@ -42,14 +42,16 @@
 	2. ***FS-Image*** - It contains complete state of the file system since the start of Name Node. After a particular time interval Edit Logs data is appended in FS-Image.
 
 - ***2 ways to achieve High Availability in Hadoop***:
-	1. Secondary Name Node: 
-		1. It does increment checkpointing(Time interval)
-		2. Keeps latest FS-Image at checkpoint as a backup file
-		3. In case of breakdown the Name Node will fetch back the FS-Image data from the Secondary Name Node.
-		4. Not suitable for critical systems as downtime > 10 mins
+	1. ***Secondary Name Node***: 
+		- It does increment checkpointing(Time interval)
+		- Keeps latest FS-Image at checkpoint as a backup file
+		- In case of breakdown the Name Node will fetch back the FS-Image data from the Secondary Name Node.
+		- Not suitable for critical systems as downtime > 10 mins
 
-2. Standby Name Node
-- Duplicate of Name Node
-- Works in Active-Passive mode
+	2. ***Standby Name Node***:
+		- Duplicate of Name Node
+		- Works in Active-Passive mode
+		- If Name Node breakdowns the Standby Node will go in Active mode & Name Node will go in Passive mode
+		- It is in complete sync with Name Node hence downtime is very less
 
 
