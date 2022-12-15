@@ -10,3 +10,20 @@
 ## Map Reduce Execution Flow
 
 <img src="https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2019/11/mapreduce-job-execution-flow.jpg">
+
+## Input Data
+- It is input files or refernce to the data stored in HDFS.
+
+## Input Format
+- Defines how the input files are read from source or how to serialize or deserialize them properly
+
+## Input Splits
+- Logical representation of the data which will be processed by an individual Mapper task
+- One Map task is created for each input split.
+- Data Block vs Input Split
+  - ***Block:*** Actual unit where raw data will be stored physically
+  - ***Input Splits:*** It is like a reference to the original block of data.
+
+## Record Reader
+- It communicates with the Input Splits & converts the data into key-value pairs.
+- For e.g. It will convert memeory address as a key & data inside that address as a value.
