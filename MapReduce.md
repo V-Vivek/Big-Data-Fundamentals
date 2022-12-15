@@ -26,4 +26,4 @@
 
 ## Record Reader
 - It communicates with the Input Splits & converts the data into key-value pairs.
-- For e.g. It will convert memeory address as a key & data inside that address as a value.
+- For e.g. It will convert memory address as a key & data inside that address as a value.
