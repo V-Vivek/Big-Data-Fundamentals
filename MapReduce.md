@@ -45,4 +45,15 @@
 - The record having the same key value goes into the same partition
 - It allows even distribution of the Map output over the Reducer
 
+## Shuffling & Sorting
+- It will arrange the data for each key on individual reducer
+- The shuffling is the physical movement of the data which is done over the network
 
+## Reducer
+- It will receiver Mapper tasks data as input and will generate resultant output
+
+## Output Format
+- It decides in which format we want to write data in HDFS
+
+## Output Files
+- Generated reference for output data
