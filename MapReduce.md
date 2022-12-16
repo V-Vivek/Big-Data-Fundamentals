@@ -51,6 +51,7 @@
 
 ## Reducer
 - It will receiver Mapper tasks data as input and will generate resultant output
+- The output of the reducer is the final output. Then framework stores the output on HDFS
 
 ## Output Format
 - It decides in which format we want to write data in HDFS
