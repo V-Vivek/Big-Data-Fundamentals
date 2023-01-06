@@ -38,12 +38,12 @@
 - It is a method to handle the failure/breakdown of Name Node
 - Highly Available -> Very very less downtime
 - Name node maintains below information
-	1. ***Edit Logs*** - It contains the recent modifications made to the file system. It stores only temporary data, it gets empty when its data is copied into FA-Image.
+	1. ***Edit Logs*** - It contains the recent modifications made to the file system. It stores only temporary data, it gets empty when its data is copied into FS-Image.
 	2. ***FS-Image*** - It contains complete state of the file system since the start of Name Node. After a particular time interval Edit Logs data is appended in FS-Image.
 
 - ***2 ways to achieve High Availability in Hadoop***:
 	1. ***Secondary Name Node***: 
-		- It does increment checkpointing(Time interval)
+		- It does incremental checkpointing(Time interval)
 		- Keeps latest FS-Image at checkpoint as a backup file
 		- In case of breakdown the Name Node will fetch back the FS-Image data from the Secondary Name Node.
 		- Not suitable for critical systems as downtime > 10 mins
