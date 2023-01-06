@@ -19,7 +19,7 @@
 
 ## Components of Resourec Manager
 1. **Scheduler:**
-	- Responsibel for allocating resources 
+	- Responsible for allocating resources 
 	- Performs scheduling of jobs based on resource requirement
 	- Maintains queues as well
 
@@ -30,7 +30,7 @@
 
 3. **Node Manager:**
 	- Takes care of individual nodes in Hadoop cluster
-	- Manages jobs & it's workflow
+	- Manages job & it's workflow
 	- Sends report & heartbeat with health status to the Resourec Manager
 	- Also Monitors resource(CPU, Memory) usage of individual container
 
