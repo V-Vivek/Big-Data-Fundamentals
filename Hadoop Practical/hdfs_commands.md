@@ -87,47 +87,42 @@ hadoop fs -copyToLocal /directory_namer/data.csv destination_directory
 - COPY A FILE FROM ONE FOLDER TO ANOTHER INSIDE HDFS
 
 ```
-hadoop fs -cp /directory_namer/data.csv /destination_directory_namer
+hadoop fs -cp /directory_namer/data.csv /destination_directory_name
 ```
 
-## URL to view data in UI:
+# Execute word count code on Hadoop
 
-Name Node - <your_app_name>.ineuron.app:9870
+- Write a mapper logic
+```
+mapper.py
+```
 
-Data Node - <your_app_name>.ineuron.app:9864
+- Write a reducer logic
+```
+reducer.py
+```
 
-Hadoop Clutser - <your_app_name>.ineuron.app:8088/cluster
+- Use Hadoop Streaming
+  - Hadoop Streaming is a utility that allows users to create and run MapReduce jobs with any executables as the mapper and/or the reducer.
+  - e.g. Python scripts or compiled binaries.
+  - The Hadoop Streaming jar file ***hadoop-streaming-2.4.0.jar*** is a Java archive file that contains the classes and resources needed to run Hadoop Streaming jobs.
+  - Hadoop Streaming is a flexible and powerful tool that allows users to run MapReduce jobs using any executables, without the need to write Java code.
+
+-  Command to execute map reduce code
+  - Method #1
+  ```
+  hadoop jar hadoop-streaming-2.4.0.jar -files mapper.py, reducer.py -mapper mapper.py -reducer reducer.py -input /path_of_input file -output /output
+  ``` 
+  
+  - Method #2
+  ```
+  hadoop jar hadoop-streaming-2.4.0.jar \
+  -input input_dir \
+  -output output_dir \
+  -mapper mapper.py \
+  -reducer reducer.py
+
+```
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# In hdfs file system / is the root
-
-# Command to check the files inside root hdfs directory
-hadoop fs -ls /
-
-# Command to create directory in hdfs
-hadoop fs -mkdir /input_data
-
-
-# Copy data from local file system to Hdfs
-hadoop fs -put test_demo/trees.csv /input_data
-
-# Copy from HDFS path to local file system
-hadoop fs -copyToLocal /input_data/trees.csv ./
-
-# Command to execute map reduce code
-hadoop jar hadoop-streaming-2.4.0.jar -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input /test/demo.txt -output /output
