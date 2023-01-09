@@ -7,27 +7,52 @@
 # LOCAL FILE SYSTEM
 
 - To list the file names in current directory  
+  ```
+  ls
+  ```
+- Optional switches for *ls* command:
+  - To use long listing format 
+    ```
+    ls -l
+    ```
+
+  - To sort the list by modification time, newest first
+    ```
+    ls -t
+    ```
+
+  - To reverse order while sorting
+    ```
+    ls -r
+    ```
+
+- To create a new directory
+```
+mkdir directory_name
+```
+
+- Copy file from source to destination
+```
+cp data.csv destination_directory
+```
+
+- Move file from source to destination
+```
+mv data.csv destination_directory
+```
+
+- Remove/Delete the file
+```
+rm data.csv
 
 ```
-ls
+
+- Remove/Delete the folder
 ```
+rm directory_name
 
 ```
-mkdir
-```
-
-```
-cp
-```
-
-```
-mv
-```
-
-```
-rm
-
-```
+# HADOOP DISTRIBUTED FILE SYSTEM (HDFS)
 
 - LISTING ROOT DIRECTORY
 
