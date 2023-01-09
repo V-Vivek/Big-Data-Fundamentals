@@ -6,6 +6,11 @@
 
 # LOCAL FILE SYSTEM
 
+- To change the current directory
+```
+cd directory_path
+```
+
 - To list the file names in current directory  
   ```
   ls
@@ -54,44 +59,35 @@ rm directory_name
 ```
 # HADOOP DISTRIBUTED FILE SYSTEM (HDFS)
 
-- LISTING ROOT DIRECTORY
-
+- LISTING ROOT DIRECTORY (/)
 ```
 hadoop fs -ls /
 ```
 
-- LISTING DEFAULT TO HOME DIRECTORY
-
-```
-hadoop fs -ls
-```
-
 - CREATE A DIRECTORY IN HDFS
-
 ```
-hadoop fs -mkdir /hadoop-user
+hadoop fs -mkdir /directory_name
 ```
 
 - COPY FROM LOCAL FS TO HDFS
+  - USING *copyFromLocal*
+  ```
+  hadoop fs -copyFromLocal data.csv /directory_name
+  ```
+  - USING *put*
+  ```
+  hadoop fs -put data.csv /directory_name
+  ```
+
+- COPY FROM HDFS TO LOCAL FS
+```
+hadoop fs -copyToLocal /directory_namer/data.csv destination_directory
+```
+
+- COPY A FILE FROM ONE FOLDER TO ANOTHER INSIDE HDFS
 
 ```
-hadoop fs -copyFromLocal trees.csv /hadoop-user
-```
-
-- COPY TO HDFS TO LOCAL FS
-
-```
-hadoop fs -copyToLocal /hadoop-user/trees.csv .
-```
-
-```
-hadoop fs -ls /hadoop-user
-```
-
-- COPY A FILE FROM ONE FOLDER TO ANOTHER
-
-```
-hadoop fs -cp /hadoop-user/trees.csv /hadoop-user2
+hadoop fs -cp /directory_namer/data.csv /destination_directory_namer
 ```
 
 ## URL to view data in UI:
