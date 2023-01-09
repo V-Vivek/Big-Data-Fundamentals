@@ -121,8 +121,7 @@ reducer.py
   -output output_dir \
   -mapper mapper.py \
   -reducer reducer.py
-
-```
+  ```
 
 
 
