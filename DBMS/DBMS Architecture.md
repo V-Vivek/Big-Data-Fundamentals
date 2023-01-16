@@ -1,0 +1,30 @@
+# View of Data (Three Schema Architecture)
+
+- The major purpose of DBMS is to provide users with an ***abstract view*** of the data. 
+- That is, the system hides certain details of how the data is stored and maintained.
+- To simplify user interaction with the system, abstraction is applied through ***several levels of abstraction***.
+- The main objective of three level architecture is to enable multiple users to access the same data with a personalized view.
+
+  ## Physical Level
+  
+  - This is the lowest level of the DBMS architecture and deals with the storage and retrieval of data on a storage device such as a hard disk. 
+  - It is concerned with the physical organization of data, such as the file structure and storage layout. 
+  - It also deals with the efficiency and optimization of data access, such as indexing and caching.
+
+
+  ##Conceptual Level
+  
+  - This level is also known as the ***logical level*** and is independent of the physical storage of data. 
+  - It deals with the overall organization of the data and the relationships between the different data entities. 
+  - It defines the data model, such as the entities, attributes, and relationships. 
+  - It is also responsible for defining the constraints and integrity rules that must be followed by the data.
+
+
+  ## View Level
+  
+  - This level is also known as the ***external level*** and is responsible for presenting the data to the end-user. 
+  - It defines the different views of the data, such as the queries and reports that the user can access. 
+  - It also deals with the security and access controls for the data, such as user authentication and authorization. 
+  - It also deals with the abstraction of the data and creating a simplified version of the data to be presented to the end-user.
+
+
